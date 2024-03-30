@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
 
+import ReactPrice from './Components/ReactPrice';
+import { Users } from './utlis/ReactPricecomponents';
+
+
 function App() {
+  //const [cart,setcart]=useState(0)
+
+  //   const image="https://static.toiimg.com/thumb/msid-78181550,width-1280,resizemode-4/78181550.jpg" 
+  //  const name="Siddhu"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    
+
+   
+      <div class="priceborder">
+        {
+        Users.map((element) => (
+        <ReactPrice    {...element} />))
+        }
+      </div>
+
+    
+    
+      
     </div>
   );
 }
